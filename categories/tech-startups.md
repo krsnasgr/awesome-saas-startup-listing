@@ -1,0 +1,165 @@
+# Tech / Startups
+
+[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
+
+155 entries · Snapshot: 2026-10-26
+
+Startup and technology discovery, including news/media entries retained for completeness. Not every entry accepts a self-service product listing.
+
+- [10words](<https://10words.io>) - `Free` · `DR 31` · `Nofollow`.
+- [AI Hub](<https://aihub.org/contribute>) - `Free` · `DR 51` · `Dofollow`.
+- [AllTopStartups](<https://alltopstartups.com>) - `Free` · `DR 59` · `Dofollow`.
+- [Android Authority](<https://androidauthority.com>) - `Free` · `DR 85` · `Nofollow`.
+- [Android Central](<https://www.androidcentral.com>) - `Free` · `DR 83` · `Nofollow`.
+- [Android Headlines](<https://www.androidheadlines.com>) - `Free` · `DR 78` · `Nofollow`.
+- [Awesome Indie](<https://awesome-indie.com>) - `Free` · `DR 0` · `Nofollow`.
+- [Betabound](<https://betabound.com>) - `Free` · `DR 56` · `Nofollow`.
+- [Betakit](<https://betakit.com>) - `Paid` · `DR 78` · `Dofollow`.
+- [BetaList](<https://betalist.com>) - `Freemium` · `DR 77` · `Nofollow`.
+- [BetaPage](<https://betapage.co>) - `Free` · `DR 53` · `Nofollow`.
+- [BigStartups](<https://bigstartups.co>) - `Free` · `DR 28` · `Nofollow`.
+- [BostInno Startups, Tech News and Events](<https://bizjournals.com>) - `Free` · `DR 91` · `Nofollow`.
+- [Built In](<https://builtin.com>) - `Paid` · `DR 86` · `Nofollow`.
+- [Built in Chicago](<https://www.builtinchicago.org/contact/send_us_tip>) - `Free` · `DR 72` · `Nofollow`.
+- [BuiltByMe](<https://builtbyme.com>) - `Free` · `DR 31` · `Dofollow`.
+- [Bulletin](<https://bulletin.so>) - `Free` · `DR 16` · `Nofollow`.
+- [Business Insider India](<https://www.businessinsider.in>) - `Free` · `DR 83` · `Nofollow`.
+- [Changelog](<https://changelog.com/news/submit>) - `Free` · `DR 79` · `Nofollow`.
+- [Classical Finance](<https://www.classicalfinance.com/your-story>) - `Free` · `DR 32` · `Nofollow`.
+- [CNET](<https://www.cnet.com/news>) - `Free` · `DR 91` · `Nofollow`.
+- [Crazy About Startups](<https://www.crazyaboutstartups.com>) - `Free` · `DR 36` · `Nofollow`.
+- [CrunchBase News](<https://news.crunchbase.com>) - `Free` · `DR 91` · `Nofollow`.
+- [ctrlalt.cc](<https://ctrlalt.cc>) - `Free` · `DR 52` · `Nofollow`.
+- [Digg](<https://digg.com>) - `Free` · `DR 92` · `Nofollow`.
+- [e27](<https://e27.co>) - `Free` · `DR 77` · `Nofollow`.
+- [Engadget](<http://www.engadget.com>) - `Free` · `DR 90` · `Nofollow`.
+- [Entrepreneur](<https://entrepreneur.com>) - `Free` · `DR 91` · `Nofollow`.
+- [EU Tech](<https://tech.eu>) - `Free` · `DR 80` · `Nofollow`.
+- [Fastcompany](<http://www.fastcompany.com>) - `Free` · `DR 92` · `Nofollow`.
+- [Fazier](<https://fazier.com>) - `Free` · `DR 84` · `Dofollow`.
+- [FeedMyStartup](<https://feedmystartup.com>) - `Free` · `DR 17` · `Nofollow`.
+- [Forbes Technology](<http://www.forbes.com/technology>) - `Free` · `DR 94` · `Nofollow`.
+- [FoundrList](<https://foundrlist.com>) - `Free` · `DR 73` · `Nofollow`.
+- [Future Startup](<https://futurestartup.com>) - `Paid` · `DR 55` · `Nofollow`.
+- [Geek Wire](<https://geekwire.com>) - `Paid` · `DR 86` · `Dofollow`.
+- [Getting Smart](<https://www.gettingsmart.com>) - `Free` · `DR 75` · `Nofollow`.
+- [Gizmodo](<http://www.gizmodo.com>) - `Free` · `DR 90` · `Nofollow`.
+- [Guardian Technology](<http://www.theguardian.com/uk/technology>) - `Free` · `DR 93` · `Nofollow`.
+- [Hacker News](<https://news.ycombinator.com/show>) - `Free` · `DR 91` · `Nofollow`.
+- [HackerNoon](<https://hackernoon.com>) - `Free` · `DR 88` · `Nofollow`.
+- [Healthline](<https://healthline.com>) - `Free` · `DR 92` · `Nofollow`.
+- [How Brands Are Built](<https://howbrandsarebuilt.com/submit>) - `Free` · `DR 48` · `Dofollow`.
+- [Huffingtonpost](<http://www.huffingtonpost.com>) - `Free` · `DR 91` · `Nofollow`.
+- [HuffPost](<https://www.huffpost.com>) - `Free` · `DR 92` · `Nofollow`.
+- [Huzzler](<https://huzzler.so>) - `Free` · `DR 69` · `Dofollow`.
+- [Idea Kiln](<https://ideakiln.com>) - `Free` · `DR 51` · `Dofollow`.
+- [Inc. Magazine](<https://www.inc.com>) - `Free` · `DR 91` · `Nofollow`.
+- [Inc42](<https://inc42.com/startup-submission>) - `Free` · `DR 81` · `Nofollow`.
+- [Indie Page](<https://indie.page>) - `Free` · `DR 2` · `Dofollow`.
+- [IndieHackerStacks](<https://indiehackerstacks.com>) - `Free` · `DR 25` · `Dofollow`.
+- [IndieHub](<https://indiehub.com>) - `Paid` · `DR 0` · `Dofollow`.
+- [IndieTool](<https://indietool.io>) - `Paid` · `DR 44` · `Dofollow`.
+- [InfoWorld](<https://www.infoworld.com>) - `Free` · `DR 87` · `Nofollow`.
+- [Insane](<https://theinsaneapp.com>) - `Free` · `DR 49` · `Dofollow`.
+- [InventList](<https://inventlist.com>) - `Free` · `DR 27` · `Nofollow`.
+- [ITQlick](<https://itqlick.com>) - `Paid` · `DR 60` · `Dofollow`.
+- [Joinly](<https://joinly.com>) - `Free` · `DR 50` · `Nofollow`.
+- [launch.cab](<https://launch.cab>) - `Free` · `DR 28` · `Nofollow`.
+- [LaunchClash](<https://launchclash.com>) - `Free` · `DR 52` · `Dofollow`.
+- [LaunchDay](<https://launchday.com>) - `Paid` · `DR 3` · `Nofollow`.
+- [Launched](<https://launched.io>) - `Free` · `DR 33` · `Dofollow`.
+- [Launched!](<https://launched.lol>) - `Free` · `DR 0` · `Nofollow`.
+- [LaunchIgniter](<https://launchigniter.com>) - `Free` · `DR 75` · `Dofollow`.
+- [Launching Next](<https://launchingnext.com>) - `Free` · `DR 55` · `Dofollow`.
+- [LaunchToday](<https://launchtoday.co>) - `Free` · `DR 44` · `Dofollow`.
+- [LaunchVibe](<https://launchvibe.com>) - `Free` · `DR 0` · `Dofollow`.
+- [Mac Stories](<http://www.macstories.net>) - `Free` · `DR 78` · `Nofollow`.
+- [MAGNiTT](<https://magnitt.com>) - `Free` · `DR 65` · `Nofollow`.
+- [Make Use of](<https://www.makeuseof.com/contributor>) - `Free` · `DR 87` · `Nofollow`.
+- [MakeUseOf](<http://www.makeuseof.com>) - `Free` · `DR 87` · `Nofollow`.
+- [MarketingDB](<https://marketingdb.com>) - `Free` · `DR 0` · `Dofollow`.
+- [Mashable](<https://mashable.com>) - `Paid` · `DR 91` · `Nofollow`.
+- [Mashable India](<https://in.mashable.com>) - `Free` · `DR 91` · `Nofollow`.
+- [Micro SaaS Examples](<https://microsaasexamples.com>) - `Free` · `DR 49` · `Nofollow`.
+- [Micro SaaS Up](<https://microsaasup.com>) - `Free` · `DR 3` · `Nofollow`.
+- [MIT Technology Review](<https://www.technologyreview.com>) - `Free` · `DR 90` · `Nofollow`.
+- [Netted](<http://netted.net/contact-us>) - `Free` · `DR 48` · `Nofollow`.
+- [New Startups](<http://new-startups.com>) - `Free` · `DR 31` · `Nofollow`.
+- [NextBigWhat](<https://nextbigwhat.com>) - `Free` · `DR 60` · `Nofollow`.
+- [Nick Launches](<https://nicklaunches.com>) - `Free` · `DR 76` · `Dofollow`.
+- [Open Startup ListBase](<https://openstartuplist.com>) - `Free` · `DR 35` · `Nofollow`.
+- [PC World](<https://www.pcworld.com>) - `Free` · `DR 88` · `Nofollow`.
+- [Pitchwall](<https://pitchwall.co>) - `Free` · `DR 72` · `Dofollow`.
+- [Product Hunt](<https://producthunt.com>) - `Free` · `DR 91` · `Nofollow`.
+- [ProductBurst](<https://productburst.com>) - `Free` · `DR 40` · `Nofollow`.
+- [Profit Hunt](<https://profithunt.io>) - `Free` · `DR 0` · `Nofollow`.
+- [PromoteProject](<https://promoteproject.com>) - `Free` · `DR 50` · `Nofollow`.
+- [Psychology Today](<https://www.psychologytoday.com/us>) - `Free` · `DR 93` · `Nofollow`.
+- [RomanianStartups.com](<https://romanianstartups.com>) - `Free` · `DR 25` · `Nofollow`.
+- [ScrollLaunch](<https://www.scrolllaunch.com>) - `Freemium` · `DR 73` · `Dofollow`.
+- [Shipyard HQ](<https://shipyardhq.com>) - `Free` · `DR 1` · `Nofollow`.
+- [Sidebar](<https://sidebar.io>) - `Free` · `DR 71` · `Dofollow`.
+- [SideProjects.net](<https://sideprojects.net>) - `Free` · `DR 20` · `Nofollow`.
+- [SiliconANGLE](<https://siliconangle.com>) - `Free` · `DR 84` · `Nofollow`.
+- [Slate](<https://slate.com/pitch>) - `Free` · `DR 90` · `Nofollow`.
+- [Smashing Magazine](<https://www.smashingmagazine.com>) - `Free` · `DR 90` · `Nofollow`.
+- [Solo Launches](<https://solo-launches.com>) - `Free` · `DR 0` · `Dofollow`.
+- [SoloPush](<https://solopush.com>) - `Free` · `DR 41` · `Nofollow`.
+- [Spotlight by Y Combinator](<https://www.ycombinator.com/launches>) - `Free` · `DR 91` · `Nofollow`.
+- [Startup Buffer](<https://startupbuffer.com>) - `Free` · `DR 44` · `Nofollow`.
+- [Startup Fame](<https://startupfa.me>) - `Free` · `DR 85` · `Dofollow`.
+- [Startup Fast](<https://startupfa.st>) - `Free` · `DR 74` · `Dofollow`.
+- [Startup Inspire](<https://startupinspire.com>) - `Free` · `DR 60` · `Nofollow`.
+- [Startup Ranking](<https://startupranking.com>) - `Free` · `DR 62` · `Nofollow`.
+- [Startup Stash](<https://startupstash.com>) - `Freemium` · `DR 66` · `Dofollow`.
+- [Startup Tracker](<https://startuptracker.io>) - `Free` · `DR 43` · `Nofollow`.
+- [Startup Vessel](<https://startupvessel.com>) - `Free` · `DR 48` · `Dofollow`.
+- [Startup88](<https://startup88.com>) - `Free` · `DR 25` · `Nofollow`.
+- [StartupBase](<https://startupbase.io>) - `Freemium` · `DR 75` · `Dofollow`.
+- [Startupbeat](<http://startupbeat.com>) - `Free` · `DR 57` · `Nofollow`.
+- [StartupGuys.net](<https://startupguys.net>) - `Paid` · `DR 47` · `Nofollow`.
+- [StartupRanked](<https://startupranked.com>) - `Free` · `DR 11` · `Nofollow`.
+- [Startups Lab](<https://startupslab.io>) - `Free` · `DR 0` · `Dofollow`.
+- [Startups.fm](<https://startups.fm>) - `Free` · `DR 48` · `Nofollow`.
+- [StartupTile](<https://startuptile.com>) - `Free` · `DR 16` · `Dofollow`.
+- [StartupTrusted](<https://startuptrusted.com>) - `Paid` · `DR 62` · `Dofollow`.
+- [Startupworld](<https://startupworld.com>) - `Paid` · `DR 37` · `Nofollow`.
+- [startuups](<https://startuups.com>) - `Free` · `DR 28` · `Dofollow`.
+- [Stellar Launch](<https://stellarlaunch.io>) - `Free` · `DR 0` · `Dofollow`.
+- [Submit A Startup](<http://thetechpanda.com/submit-a-startup>) - `Free` · `DR 55` · `Nofollow`.
+- [SubmitBear](<https://www.submitbear.com>) - `Freemium` · `DR 31` · `Conditional`.
+- [SubmitHunt](<https://submithunt.com>) - `Free` · `DR 47` · `Dofollow`.
+- [Super Launch](<https://superlaunch.io>) - `Free` · `DR 12` · `Nofollow`.
+- [Superb Crew](<http://www.superbcrew.com>) - `Free` · `DR 66` · `Nofollow`.
+- [Taalk.com](<https://taalk.com>) - `Free` · `DR 17` · `Dofollow`.
+- [Tech Faster](<http://techfaster.com/submit-your-company>) - `Paid` · `DR 32` · `Dofollow`.
+- [Tech Pluto](<https://www.techpluto.com/submit-startup>) - `Free` · `DR 53` · `Nofollow`.
+- [Tech \| Time](<https://time.com/section/tech>) - `Free` · `DR 92` · `Nofollow`.
+- [Tech.co](<https://tech.co>) - `Paid` · `DR 82` · `Nofollow`.
+- [TechCrunch](<https://techcrunch.com>) - `Paid` · `DR 92` · `Nofollow`.
+- [Techendo](<https://techendo.com>) - `Free` · `DR 34` · `Nofollow`.
+- [Techli](<https://techli.com>) - `Free` · `DR 50` · `Nofollow`.
+- [Techlo Media](<https://techlomedia.in>) - `Paid` · `DR 46` · `Dofollow`.
+- [Technology Advice](<https://technologyadvice.com>) - `Paid` · `DR 78` · `Dofollow`.
+- [TechPluto](<http://www.techpluto.com/submit-a-startup>) - `Free` · `DR 53` · `Nofollow`.
+- [The Register UK](<http://www.theregister.co.uk>) - `Free` · `DR 86` · `Nofollow`.
+- [The Startup INC](<https://thestartupinc.com>) - `Paid` · `DR 33` · `Nofollow`.
+- [The Verge](<https://www.theverge.com>) - `Free` · `DR 92` · `Nofollow`.
+- [The Wall Street Journal](<https://www.wsj.com>) - `Free` · `DR 93` · `Nofollow`.
+- [TinyLaunch](<https://tinylaunch.com>) - `Free` · `DR 74` · `Dofollow`.
+- [TinyLaunchpad](<https://tinylaunchpad.com>) - `Free` · `DR 45` · `Dofollow`.
+- [Towards Data Science](<https://towardsdatascience.com>) - `Free` · `DR 88` · `Nofollow`.
+- [Trendy Startups](<https://trendystartups.com>) - `Free` · `DR 28` · `Dofollow`.
+- [Uneed](<https://uneed.best>) - `Freemium` · `DR 76` · `Dofollow`.
+- [Vator](<https://vator.tv>) - `Free` · `DR 71` · `Nofollow`.
+- [Venture Village](<http://venturevillage.eu>) - `Free` · `DR 50` · `Nofollow`.
+- [VentureBeat](<https://venturebeat.com>) - `Paid` · `DR 91` · `Nofollow`.
+- [Versily](<https://versily.com>) - `Free` · `DR 69` · `Nofollow`.
+- [Viral Bucket](<https://viralbucket.com>) - `Free` · `DR 0` · `Dofollow`.
+- [Webrazzi](<http://webrazzi.com/en/startup-form>) - `Free` · `DR 75` · `Nofollow`.
+- [What Launched Today](<https://whatlaunchedtoday.com>) - `Free` · `DR 0` · `Dofollow`.
+- [Wired](<http://www.wired.com>) - `Free` · `DR 92` · `Nofollow`.
+- [WP Newsify](<https://wpnewsify.com>) - `Free` · `DR 52` · `Nofollow`.
+- [Yourstory](<https://yourstory.com>) - `Paid` · `DR 85` · `Nofollow`.
+
+¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-26",
+  "captured": {
+    "entries": 1018,
+    "unique_exact_urls": 1018,
+    "pages": 21,
+    "categories": 18,
+    "indexed_views": 33,
+    "indexed_subset_entries": 864,
+    "view_observations": 6265,
+    "additional_archive_entries": 154
+  },
+  "counts": {
+    "pricing": {
+      "Free": 834,
+      "Freemium": 45,
+      "Paid": 139
+    },
+    "link_type": {
+      "Conditional": 2,
+      "Dofollow": 595,
+      "Nofollow": 421
+    },
+    "category": {
+      "AI Tools": 121,
+      "Community": 147,
+      "Deals / SaaS": 6,
+      "Design Tools": 46,
+      "Developer Tools": 5,
+      "General Directory": 305,
+      "Indie Hackers": 13,
+      "Launchpad": 33,
+      "Marketing Tools": 3,
+      "Marketplace": 10,
+      "No-Code": 2,
+      "Open Source": 5,
+      "Productivity": 2,
+      "SaaS Tools": 19,
+      "Software Discovery": 114,
+      "Software Reviews": 23,
+      "Startup Directory": 9,
+      "Tech / Startups": 155
+    },
+    "views": {
+      "free-startup-directories": 834,
+      "freemium-startup-directories": 45,
+      "paid-startup-directories": 139,
+      "dofollow-startup-directories": 595,
+      "nofollow-startup-directories": 421,
+      "conditional-links": 2,
+      "free-dofollow-startup-directories": 458,
+      "free-dofollow-dr-50-plus": 179,
+      "dr-30-plus": 747,
+      "dr-50-plus": 508,
+      "dr-70-plus": 330,
+      "dr-90-plus": 142,
+      "curated-subset": 864,
+      "archive-only": 154
+    }
+  },
+  "coverage_complete": true,
+  "coverage_checks": {
+    "all_1018_exact_urls_preserved": true,
+    "all_18_categories_present": true,
+    "all_33_indexed_views_accounted_for": true,
+    "indexed_subset_is_archive_subset": true,
+    "duplicates_removed_by_domain": false
+  },
+  "catalog_sha256": "0563c36c779173bad15c9a1ce1b17fb986b891f19d7bb9b90ab2027ad8d6435b",
+  "limitations": [
+    "Reported metadata was not independently verified at each destination.",
+    "Pricing, Domain Rating and link type are snapshot labels, not guarantees or live metrics.",
+    "Separate paths on the same domain remain separate entries.",
+    "The full archive includes non-SaaS destinations for completeness."
+  ]
+}
