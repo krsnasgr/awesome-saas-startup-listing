@@ -34,8 +34,6 @@ def table(rows, category=False):
         cells += [r['pricing'], str(r['domain_rating']), r['link_type']]
         out.append('| ' + ' | '.join(cells) + ' |')
     return '\n'.join(out)
-def entries(rows):
-    return '\n'.join(f"- {link(r)} - `{r['pricing']}` · `DR {r['domain_rating']}` · `{r['link_type']}`." for r in rows)
 def az(rows):
     return sorted(rows, key=lambda r:(r['name'].casefold(), r['url']))
 def drsort(rows):
@@ -78,7 +76,7 @@ category_notes = {
 footer = '\n\n¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.\n'
 for category in categories:
     selected = [r for r in rows if r['category']==category]
-    write(f'categories/{slug(category)}.md',f'# {category}\n\n[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Snapshot: {SNAPSHOT}\n\n{category_notes[category]}\n\n'+entries(selected)+footer)
+    write(f'categories/{slug(category)}.md',f'# {category}\n\n[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Snapshot: {SNAPSHOT}\n\n{category_notes[category]}\n\n'+table(selected)+footer)
 
 views = [
  ('free-startup-directories','Free startup directories',lambda r:r['pricing']=='Free','Every archive entry labeled Free. This does not mean unrestricted promotion, a guaranteed approval, or a guaranteed free backlink.'),
@@ -156,7 +154,7 @@ Each archive entry appears once in the full catalog. Open a focused category pag
 
 ## Reading an entry
 
-Every listing follows the same compact pattern: **linked name — pricing · DR · link type**. Categories sort A–Z; filter tables sort by descending DR.
+Every listing appears in a table with **Listing, Pricing, DR and Link type** columns. The listing name links to the exact destination URL. Categories sort A–Z; filter tables sort by descending DR.
 
 - **Pricing:** `Free`, `Freemium` or `Paid`, as recorded in the snapshot. A free account does not necessarily mean every listing feature is free.
 - **DR:** the reported Ahrefs score at capture, not a live lookup or a prediction for your own website.
@@ -190,7 +188,7 @@ related={
 }
 for c in categories:
     peers=' · '.join(f'[{v}](#{slug(v)})' for v in related[c])
-    readme+=f'<a id="{slug(c)}"></a>\n\n### {c}\n\n{category_counts[c]} entries · [Focused page](categories/{slug(c)}.md) · [Back to contents](#contents)\n\n{category_notes[c]}\n\nExplore also: {peers}.\n\n'+entries([r for r in rows if r['category']==c])+'\n\n'
+    readme+=f'<a id="{slug(c)}"></a>\n\n### {c}\n\n{category_counts[c]} entries · [Focused page](categories/{slug(c)}.md) · [Back to contents](#contents)\n\n{category_notes[c]}\n\nExplore also: {peers}.\n\n'+table([r for r in rows if r['category']==c])+'\n\n'
 readme+=f'''## Use the list well
 
 1. **Check fit first.** Pick a relevant audience and verify that the destination accepts your product type.

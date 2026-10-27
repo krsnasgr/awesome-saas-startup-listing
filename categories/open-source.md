@@ -6,10 +6,12 @@
 
 Open-source and developer ecosystem destinations. A relevant public project or integration may be required.
 
-- [GitHub Showcase](<https://github.com/topics>) - `Free` · `DR 97` · `Nofollow`.
-- [n8n Integrations](<https://n8n.io/integrations>) - `Free` · `DR 90` · `Dofollow`.
-- [Open Collective](<https://opencollective.com>) - `Free` · `DR 89` · `Nofollow`.
-- [OpenAlternative](<https://openalternative.co>) - `Free` · `DR 61` · `Nofollow`.
-- [SourceForge](<https://sourceforge.net>) - `Free` · `DR 93` · `Dofollow`.
+| Listing | Pricing | DR¹ | Link type¹ |
+| --- | --- | --- | --- |
+| [GitHub Showcase](<https://github.com/topics>) | Free | 97 | Nofollow |
+| [n8n Integrations](<https://n8n.io/integrations>) | Free | 90 | Dofollow |
+| [Open Collective](<https://opencollective.com>) | Free | 89 | Nofollow |
+| [OpenAlternative](<https://openalternative.co>) | Free | 61 | Nofollow |
+| [SourceForge](<https://sourceforge.net>) | Free | 93 | Dofollow |
 
 ¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

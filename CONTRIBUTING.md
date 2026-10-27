@@ -36,10 +36,12 @@ A suggestion is not automatically part of the historical capture or its 864-entr
 
 ## Entry format and organization
 
-The README and category pages are generated, with one entry per line:
+The README and category pages are generated, with one entry per table row:
 
-```text
-- [Name](<exact-url>) - `Pricing` · `DR value` · `Link type`.
+```markdown
+| Listing | Pricing | DR¹ | Link type¹ |
+| --- | --- | --- | --- |
+| [Name](<exact-url>) | Free | 50 | Dofollow |
 ```
 
 - Keep names factual and retain captured spelling in preserved records.

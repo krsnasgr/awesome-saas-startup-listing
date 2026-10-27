@@ -6,7 +6,9 @@
 
 Productivity-focused tools and discovery.
 
-- [ManyLinks](<https://manylinks.co>) - `Freemium` · `DR 0` · `Nofollow`.
-- [Notion Marketplace](<https://www.notion.so/templates>) - `Freemium` · `DR 92` · `Nofollow`.
+| Listing | Pricing | DR¹ | Link type¹ |
+| --- | --- | --- | --- |
+| [ManyLinks](<https://manylinks.co>) | Freemium | 0 | Nofollow |
+| [Notion Marketplace](<https://www.notion.so/templates>) | Freemium | 92 | Nofollow |
 
 ¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

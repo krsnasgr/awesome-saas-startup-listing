@@ -6,7 +6,9 @@
 
 No-code product and builder discovery.
 
-- [Nocode.tech](<https://www.nocode.tech>) - `Free` · `DR 65` · `Dofollow`.
-- [NoCodeList](<https://nocodelist.co>) - `Free` · `DR 37` · `Dofollow`.
+| Listing | Pricing | DR¹ | Link type¹ |
+| --- | --- | --- | --- |
+| [Nocode.tech](<https://www.nocode.tech>) | Free | 65 | Dofollow |
+| [NoCodeList](<https://nocodelist.co>) | Free | 37 | Dofollow |
 
 ¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

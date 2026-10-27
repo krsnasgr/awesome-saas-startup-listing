@@ -14,7 +14,6 @@ def check(ok,message):
     if not ok:raise AssertionError(message)
 def read(name):return json.loads((DATA/name).read_text())
 def slug(s):return re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
-def entry_urls(path):return re.findall(r'^- \[.*?\]\(<([^>]+)>\) - ',path.read_text(),re.M)
 def table_urls(path):return re.findall(r'^\| \[.*?\]\(<([^>]+)>\) \|',path.read_text(),re.M)
 def anchors(path):
     text=path.read_text();result=set(re.findall(r'<a\s+(?:id|name)="([^"]+)"',text));counts=Counter()
@@ -50,16 +49,16 @@ check(len(csv_rows)==1018,'CSV row count mismatch')
 for c,r in zip(csv_rows,rows):check(all(c[k]==str(r[k]) for k in fields),'CSV/JSON mismatch')
 readme=ROOT/'README.md'
 check(readme.stat().st_size<500*1024,'README exceeds GitHub 500 KiB limit')
-check(Counter(entry_urls(readme))==Counter(by_url.keys()),'README must contain every exact URL once')
+check(Counter(table_urls(readme))==Counter(by_url.keys()),'README must contain every exact URL once')
 check(re.search(r'^## (.+)$',readme.read_text(),re.M).group(1)=='Contents','Contents must be first section')
 check('https://github.com/krsnasgr/awesome-saas-startup-listing)' in readme.read_text(),'Wrong repository canonical link')
 category_files=list((ROOT/'categories').glob('*.md'));check(len(category_files)==18,'Category pages missing')
 for category in {r['category'] for r in rows}:
     path=ROOT/'categories'/f'{slug(category)}.md'
-    check(entry_urls(path)==[r['url'] for r in rows if r['category']==category],f'Wrong category: {category}')
+    check(table_urls(path)==[r['url'] for r in rows if r['category']==category],f'Wrong category: {category}')
 for path in [readme]+category_files:
-    matches=re.findall(r'^- \[.*?\]\(<([^>]+)>\) - `([^`]+)` · `DR (\d+)` · `([^`]+)`\.$',path.read_text(),re.M)
-    check(len(matches)==len(entry_urls(path)),'Malformed metadata entry')
+    matches=re.findall(r'^\| \[.*?\]\(<([^>]+)>\) \| ([^|]+) \| (\d+) \| ([^|]+) \|$',path.read_text(),re.M)
+    check(len(matches)==len(table_urls(path)),'Malformed metadata row')
     for url,price,rating,kind in matches:
         r=by_url[url];check((price,int(rating),kind)==(r['pricing'],r['domain_rating'],r['link_type']),'Entry metadata mismatch')
 views={

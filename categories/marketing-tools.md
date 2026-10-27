@@ -6,8 +6,10 @@
 
 Marketing-focused discovery and platforms; confirm the submission format before investing effort.
 
-- [Funnel Directory](<https://funneldirectory.com>) - `Freemium` · `DR 18` · `Dofollow`.
-- [Medium](<https://medium.com>) - `Freemium` · `DR 94` · `Nofollow`.
-- [Pinterest](<https://pinterest.com>) - `Free` · `DR 97` · `Nofollow`.
+| Listing | Pricing | DR¹ | Link type¹ |
+| --- | --- | --- | --- |
+| [Funnel Directory](<https://funneldirectory.com>) | Freemium | 18 | Dofollow |
+| [Medium](<https://medium.com>) | Freemium | 94 | Nofollow |
+| [Pinterest](<https://pinterest.com>) | Free | 97 | Nofollow |
 
 ¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
