@@ -2,7 +2,7 @@
 
 [← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-13 entries · Snapshot: 2026-10-26 · Highest reported DR first
+13 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
 Founder- and independent-maker-focused discovery surfaces.
 
@@ -22,4 +22,4 @@ Founder- and independent-maker-focused discovery surfaces.
 | [Indie Launch](<https://indielaunch.com>) | Free | 3 | Dofollow |
 | [IndiePA](<https://indiepa.com>) | Free | 0 | Dofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

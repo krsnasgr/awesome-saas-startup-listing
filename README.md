@@ -2,9 +2,11 @@
 
 # Awesome SaaS & Startup Directories: Free Backlinks & Domain Rating
 
-Find startup directories, SaaS listing sites and free backlink opportunities for your link building research. Compare **1,018 destinations** by pricing, reported Ahrefs Domain Rating (DR), and dofollow or nofollow link type, with the **highest DR first** in every listing table.
+Find startup directories, SaaS listing sites and free backlink opportunities for your link building research. Compare **1,019 destinations** by pricing, reported Ahrefs Domain Rating (DR), and dofollow or nofollow link type, with the **highest DR first** in every listing table.
 
-**1,018 exact links · 18 categories · 834 free listings · Snapshot: 2026-10-26**
+**1,019 exact links · 18 categories · 835 free listings · Updated: 2026-10-27**
+
+Original archive: 1,018 entries captured 2026-10-26. [Latest addition: AZN8 — free listing, no badge required](docs/ADDITIONS.md#azn8). The cover image shows the original archive totals.
 
 Looking to **increase Domain Rating**, find **free dofollow backlinks**, or submit your SaaS to **high-DR directories**? Start with the filtered shortlists below and the [guide to increasing DR](docs/INCREASE-DOMAIN-RATING.md). This archive includes launch platforms, communities and software review sites as well as directories. [Contributions and corrections are welcome](CONTRIBUTING.md).
 
@@ -41,13 +43,13 @@ Looking to **increase Domain Rating**, find **free dofollow backlinks**, or subm
 
 | View | Entries |
 | --- | ---: |
-| [Free startup directories](views/free-startup-directories.md) | 834 |
+| [Free startup directories](views/free-startup-directories.md) | 835 |
 | [Freemium startup directories](views/freemium-startup-directories.md) | 45 |
 | [Paid startup directories](views/paid-startup-directories.md) | 139 |
-| [Dofollow startup directories](views/dofollow-startup-directories.md) | 595 |
+| [Dofollow startup directories](views/dofollow-startup-directories.md) | 596 |
 | [Nofollow startup directories](views/nofollow-startup-directories.md) | 421 |
 | [Conditional link types](views/conditional-links.md) | 2 |
-| [Free dofollow startup directories](views/free-dofollow-startup-directories.md) | 458 |
+| [Free dofollow startup directories](views/free-dofollow-startup-directories.md) | 459 |
 | [Free dofollow directories with DR 50+](views/free-dofollow-dr-50-plus.md) | 179 |
 
 **Browse by DR:** [30+](views/dr-30-plus.md) · [50+](views/dr-50-plus.md) · [70+](views/dr-70-plus.md) · [90+](views/dr-90-plus.md). [All 14 filters](views/README.md) · [CSV](data/directories.csv) · [JSON](data/directories.json).
@@ -81,7 +83,7 @@ Each archive entry appears once in the full catalog. Open a focused category pag
 | [No-Code](categories/no-code.md) | 2 | [Browse below](#no-code) |
 | [Open Source](categories/open-source.md) | 5 | [Browse below](#open-source) |
 | [Productivity](categories/productivity.md) | 2 | [Browse below](#productivity) |
-| [SaaS Tools](categories/saas-tools.md) | 19 | [Browse below](#saas-tools) |
+| [SaaS Tools](categories/saas-tools.md) | 20 | [Browse below](#saas-tools) |
 | [Software Discovery](categories/software-discovery.md) | 114 | [Browse below](#software-discovery) |
 | [Software Reviews](categories/software-reviews.md) | 23 | [Browse below](#software-reviews) |
 | [Startup Directory](categories/startup-directory.md) | 9 | [Browse below](#startup-directory) |
@@ -971,7 +973,7 @@ Explore also: [SaaS Tools](#saas-tools) · [Software Discovery](#software-discov
 
 ### SaaS Tools
 
-19 entries · [Focused page](categories/saas-tools.md) · [Back to contents](#contents)
+20 entries · [Focused page](categories/saas-tools.md) · [Back to contents](#contents)
 
 Software-as-a-service catalogs and integration ecosystems.
 
@@ -994,6 +996,7 @@ Explore also: [Software Reviews](#software-reviews) · [Marketplace](#marketplac
 | [CurlShip](<https://curlship.com>) | Free | 49 | Dofollow |
 | [SaaS Roots](<https://saasroots.com>) | Free | 45 | Dofollow |
 | [1000 Tools](<https://1000.tools>) | Freemium | 38 | Dofollow |
+| [AZN8](<https://azn8.com/>) | Free | 19 | Dofollow |
 | [SaaS Radius](<https://saasradius.com>) | Free | 10 | Nofollow |
 | [Best SaaS Tools](<https://www.bestsaastools.com>) | Free | 0 | Dofollow |
 | [SaasHunt](<https://saashunt.io>) | Free | 0 | Dofollow |
@@ -1364,6 +1367,7 @@ Looking for free startup directories or researching free backlinks and Domain Ra
 ## Coverage and integrity
 
 - **Full archive:** 21 rendered pages, **1,018 rows / 1,018 distinct exact URLs**, with 18 rows on the final page.
+- **Current catalog:** 1,019 entries, including 1 [dated addition](docs/ADDITIONS.md). New entries keep their own record dates and are not counted as original archive observations.
 - **Live list index:** **33 of 33 links**, **6,265 row observations**, **864 unique URLs**. Every per-list count matches the index.
 - **Nothing lost to domain deduplication:** separate group, community, integration and submission paths remain distinct. The [154 archive-only entries](views/archive-only.md) are preserved alongside the [864-entry indexed subset](views/curated-subset.md).
 - **No copied editorial material:** factual records only; no editorial reviews, descriptions or page replicas.
@@ -1384,4 +1388,4 @@ Looking for free startup directories or researching free backlinks and Domain Ra
 
 ## Snapshot notes
 
-Captured 2026-10-26. Reported pricing, DR and link types have not been independently verified at every destination. There is no guarantee of acceptance, indexing, backlinks or ranking improvements. The catalog includes broad archive entries for completeness, not as endorsements. [Metadata limitations](docs/METHODOLOGY.md).
+Original archive captured 2026-10-26; latest addition 2026-10-27. Reported pricing, DR and link types have not been independently verified at every destination. There is no guarantee of acceptance, indexing, backlinks or ranking improvements. The catalog includes broad archive entries for completeness, not as endorsements. [Metadata limitations](docs/METHODOLOGY.md) · [Addition sources](docs/ADDITIONS.md).

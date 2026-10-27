@@ -21,7 +21,7 @@ Choose a shortlist based on your budget and product, then review each destinatio
 | SaaS and software audiences | [SaaS tools](../categories/saas-tools.md), [software discovery](../categories/software-discovery.md), [software reviews](../categories/software-reviews.md) |
 | Startup launch destinations | [Launchpads](../categories/launchpad.md) and [startup directories](../categories/startup-directory.md) |
 
-All listing tables put the highest reported DR first. Pricing, DR and link labels come from the **2026-10-26 snapshot**; they have not been independently rechecked at every destination. “Free” may cover only part of a service. A reported dofollow label does not guarantee a followed link for your submission.
+All listing tables put the highest reported DR first. Most pricing, DR and link labels come from the **2026-10-26 snapshot**; [later additions](ADDITIONS.md) keep their own dates. Labels have not been independently rechecked at every destination. “Free” may cover only part of a service. A reported dofollow label does not guarantee a followed link for your submission.
 
 ## A directory submission workflow
 
@@ -43,7 +43,7 @@ Ahrefs says nofollow backlinks do not pass rating in its DR calculation. A nofol
 
 ### Where can I find free backlinks for a SaaS startup?
 
-Begin with the [free dofollow shortlist](../views/free-dofollow-startup-directories.md), then narrow it by category and current eligibility. This catalog records 834 entries labeled Free across all link types; it does not promise 834 free backlinks.
+Begin with the [free dofollow shortlist](../views/free-dofollow-startup-directories.md), then narrow it by category and current eligibility. This catalog records 835 entries labeled Free across all link types; it does not promise 835 free backlinks.
 
 ### Can I boost DR quickly or guarantee a target score?
 

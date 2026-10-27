@@ -25,12 +25,15 @@ rows=read('catalog.json');export=read('directories.json');coverage=read('coverag
 by_url={r['url']:r for r in rows}
 fields={'id','name','url','category','pricing','domain_rating','link_type','curated_subset','snapshot_date'}
 check(rows==export,'Canonical catalog / JSON mismatch')
-check(len(rows)==len(by_url)==1018,'Expected 1,018 unique exact URLs')
-check(len({r['id'] for r in rows})==1018,'Duplicate short IDs')
+check(len(rows)==len(by_url)==1019,'Expected 1,019 unique exact URLs')
+check(len({r['id'] for r in rows})==1019,'Duplicate short IDs')
+archive=[r for r in rows if r['snapshot_date']=='2026-10-26']
+archive_bytes=(json.dumps(archive,ensure_ascii=False,indent=2)+'\n').encode()
+check(len(archive)==1018 and hashlib.sha256(archive_bytes).hexdigest()=='0563c36c779173bad15c9a1ce1b17fb986b891f19d7bb9b90ab2027ad8d6435b','Original archive records changed')
 check(len({r['category'] for r in rows})==18,'Category count mismatch')
 check(rows==sorted(rows,key=lambda r:(r['name'].casefold(),r['url'])),'Catalog not alphabetized')
-check(Counter(r['pricing'] for r in rows)=={'Free':834,'Freemium':45,'Paid':139},'Pricing count mismatch')
-check(Counter(r['link_type'] for r in rows)=={'Dofollow':595,'Nofollow':421,'Conditional':2},'Link type mismatch')
+check(Counter(r['pricing'] for r in rows)=={'Free':835,'Freemium':45,'Paid':139},'Pricing count mismatch')
+check(Counter(r['link_type'] for r in rows)=={'Dofollow':596,'Nofollow':421,'Conditional':2},'Link type mismatch')
 check(sum(r['curated_subset'] for r in rows)==864,'Indexed subset count mismatch')
 check(hashlib.sha256((DATA/'catalog.json').read_bytes()).hexdigest()==coverage['catalog_sha256'],'Catalog hash mismatch')
 for r in rows:
@@ -39,13 +42,15 @@ for r in rows:
     u=urlsplit(r['url']);check(u.scheme in ('http','https') and bool(u.netloc),'Invalid URL syntax')
     check(type(r['domain_rating']) is int and 0<=r['domain_rating']<=100,'Invalid DR')
     check(type(r['curated_subset']) is bool,'Invalid subset flag')
-    check(r['snapshot_date']=='2026-10-26','Invalid snapshot date')
+    check(r['snapshot_date']==('2026-10-27' if r['url']=='https://azn8.com/' else '2026-10-26'),'Invalid record date')
+check(by_url['https://azn8.com/']=={'id':hashlib.sha256(b'https://azn8.com/').hexdigest()[:16],'name':'AZN8','url':'https://azn8.com/','category':'SaaS Tools','pricing':'Free','domain_rating':19,'link_type':'Dofollow','curated_subset':False,'snapshot_date':'2026-10-27'},'AZN8 addition differs from documented evidence')
 for key,field in [('pricing','pricing'),('link_type','link_type'),('category','category')]:
     check(coverage['counts'][key]==dict(Counter(r[field] for r in rows)),f'Manifest {key} mismatch')
 check(coverage['captured']=={'entries':1018,'unique_exact_urls':1018,'pages':21,'categories':18,'indexed_views':33,'indexed_subset_entries':864,'view_observations':6265,'additional_archive_entries':154},'Coverage counts mismatch')
+check(coverage['current']=={'entries':1019,'added_entries':1,'last_updated':'2026-10-27'},'Current catalog counts mismatch')
 with (DATA/'directories.csv').open(newline='',encoding='utf-8') as f:
     reader=csv.DictReader(f);check(set(reader.fieldnames)==fields,'Unexpected CSV fields');csv_rows=list(reader)
-check(len(csv_rows)==1018,'CSV row count mismatch')
+check(len(csv_rows)==1019,'CSV row count mismatch')
 for c,r in zip(csv_rows,rows):check(all(c[k]==str(r[k]) for k in fields),'CSV/JSON mismatch')
 readme=ROOT/'README.md'
 check(readme.stat().st_size<500*1024,'README exceeds GitHub 500 KiB limit')
@@ -78,7 +83,7 @@ views={
  'dr-70-plus':lambda r:r['domain_rating']>=70,
  'dr-90-plus':lambda r:r['domain_rating']>=90,
  'curated-subset':lambda r:r['curated_subset'],
- 'archive-only':lambda r:not r['curated_subset'],
+ 'archive-only':lambda r:not r['curated_subset'] and r['snapshot_date']=='2026-10-26',
 }
 for key,predicate in views.items():
     selected=sorted([r for r in rows if predicate(r)],key=lambda r:(-r['domain_rating'],r['name'].casefold(),r['url']))
@@ -99,4 +104,4 @@ for path in ['.github/PULL_REQUEST_TEMPLATE.md','.github/ISSUE_TEMPLATE/correcti
     check((ROOT/path).exists(),f'Missing file: {path}')
 check(set(p.name for p in DATA.glob('*.json'))=={'catalog.json','directories.json','coverage.json'},'Non-public audit JSON in data directory')
 check(not (ROOT/'docs/DESIGN.md').exists(),'Internal design research should not be published')
-print(json.dumps({'status':'PASS','checks':checks,'entries':1018,'categories':18,'filtered_views':14,'markdown_files':len(markdown),'relative_links_checked':relative_links,'readme_bytes':readme.stat().st_size,'github_readme_limit_bytes':512000,'public_fields_only':True,'destination_reachability_tested':False},indent=2))
+print(json.dumps({'status':'PASS','checks':checks,'entries':len(rows),'original_archive_entries':len(archive),'categories':18,'filtered_views':14,'markdown_files':len(markdown),'relative_links_checked':relative_links,'readme_bytes':readme.stat().st_size,'github_readme_limit_bytes':512000,'public_fields_only':True,'destination_reachability_tested':False},indent=2))

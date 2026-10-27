@@ -2,7 +2,7 @@
 
 [← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-5 entries · Snapshot: 2026-10-26 · Highest reported DR first
+5 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
 Open-source and developer ecosystem destinations. A relevant public project or integration may be required.
 
@@ -14,4 +14,4 @@ Open-source and developer ecosystem destinations. A relevant public project or i
 | [Open Collective](<https://opencollective.com>) | Free | 89 | Nofollow |
 | [OpenAlternative](<https://openalternative.co>) | Free | 61 | Nofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

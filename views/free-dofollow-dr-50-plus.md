@@ -2,7 +2,7 @@
 
 [← README](../README.md) · [All views](README.md) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-179 entries · Snapshot: 2026-10-26 · Highest reported DR first
+179 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
 A discovery shortlist, sorted by reported DR. Start with product eligibility and audience relevance, not the score alone.
 
@@ -188,4 +188,4 @@ A discovery shortlist, sorted by reported DR. Start with product eligibility and
 | [Proofstories](<https://proofstories.io/directory>) | Launchpad | Free | 50 | Dofollow |
 | [That App Show](<https://thatappshow.com>) | Software Discovery | Free | 50 | Dofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

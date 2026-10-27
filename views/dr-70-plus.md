@@ -2,9 +2,9 @@
 
 [← README](../README.md) · [All views](README.md) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-330 entries · Snapshot: 2026-10-26 · Highest reported DR first
+330 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
-All archive entries whose reported DR is at least 70.
+All catalog entries whose reported DR is at least 70.
 
 | Listing | Category | Pricing | DR¹ | Link type¹ |
 | --- | --- | --- | --- | --- |
@@ -339,4 +339,4 @@ All archive entries whose reported DR is at least 70.
 | [SaaSCity Map](<https://saascity.io>) | Software Discovery | Free | 70 | Dofollow |
 | [Slant](<https://slant.co>) | Software Discovery | Free | 70 | Nofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

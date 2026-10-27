@@ -2,7 +2,7 @@
 
 [← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-147 entries · Snapshot: 2026-10-26 · Highest reported DR first
+147 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
 Forums, groups, chat servers and participation-led communities. Read each community’s rules; a presence here is not permission to promote.
 
@@ -156,4 +156,4 @@ Forums, groups, chat servers and participation-led communities. Read each commun
 | [Hackers Pad](<https://hackerspad.net>) | Free | 8 | Nofollow |
 | [Founderopedia](<https://founderopedia.com>) | Free | 3 | Nofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

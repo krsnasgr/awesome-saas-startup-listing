@@ -40,13 +40,17 @@ def drsort(rows):
     return sorted(rows, key=lambda r:(-r['domain_rating'], r['name'].casefold(), r['url']))
 
 rows = az(read('catalog.json'))
-assert len(rows) == len({r['url'] for r in rows}) == 1018
+assert len(rows) == len({r['url'] for r in rows}) == 1019
+archive = [r for r in rows if r['snapshot_date'] == SNAPSHOT]
+additions = [r for r in rows if r['snapshot_date'] != SNAPSHOT]
+updated = max(r['snapshot_date'] for r in rows)
+assert len(archive) == 1018
 categories = sorted({r['category'] for r in rows})
 price_counts = Counter(r['pricing'] for r in rows)
 link_counts = Counter(r['link_type'] for r in rows)
 category_counts = Counter(r['category'] for r in rows)
-assert price_counts == {'Free':834,'Freemium':45,'Paid':139}
-assert link_counts == {'Dofollow':595,'Nofollow':421,'Conditional':2}
+assert price_counts == {'Free':835,'Freemium':45,'Paid':139}
+assert link_counts == {'Dofollow':596,'Nofollow':421,'Conditional':2}
 assert len(categories) == 18
 jwrite('data/directories.json', rows)
 with (DATA / 'directories.csv').open('w',newline='',encoding='utf-8') as f:
@@ -73,13 +77,14 @@ category_notes = {
  'Startup Directory':'Company and startup-focused listings. Eligibility and verification can vary.',
  'Tech / Startups':'Startup and technology discovery, including news/media entries retained for completeness. Not every entry accepts a self-service product listing.',
 }
-footer = '\n\n¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.\n'
+footer = '\n\n¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.\n'
 for category in categories:
     selected = [r for r in rows if r['category']==category]
-    write(f'categories/{slug(category)}.md',f'# {category}\n\n[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Snapshot: {SNAPSHOT} · Highest reported DR first\n\n{category_notes[category]}\n\n'+table(selected)+footer)
+    note = '\n\n[AZN8: free listing, no badge required](../docs/ADDITIONS.md#azn8).' if category == 'SaaS Tools' else ''
+    write(f'categories/{slug(category)}.md',f'# {category}\n\n[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Latest record date: {max(r["snapshot_date"] for r in selected)} · Highest reported DR first\n\n{category_notes[category]}\n\n'+table(selected)+note+footer)
 
 views = [
- ('free-startup-directories','Free startup directories',lambda r:r['pricing']=='Free','Every archive entry labeled Free. This does not mean unrestricted promotion, a guaranteed approval, or a guaranteed free backlink.'),
+ ('free-startup-directories','Free startup directories',lambda r:r['pricing']=='Free','Every catalog entry labeled Free. This does not mean unrestricted promotion, a guaranteed approval, or a guaranteed free backlink.'),
  ('freemium-startup-directories','Freemium startup directories',lambda r:r['pricing']=='Freemium','Entries labeled Freemium. Check what the free tier includes and whether a listing or link requires payment.'),
  ('paid-startup-directories','Paid startup directories',lambda r:r['pricing']=='Paid','Entries labeled Paid. Compare audience fit and submission terms rather than buying a promised ranking outcome.'),
  ('dofollow-startup-directories','Dofollow startup directories',lambda r:r['link_type']=='Dofollow','Reported Dofollow entries across every pricing tier. This is not a fresh audit of live backlink attributes.'),
@@ -87,23 +92,24 @@ views = [
  ('conditional-links','Conditional link types',lambda r:r['link_type']=='Conditional','Conditional is deliberately preserved as its own type. Confirm the applicable placement, plan and linking terms.'),
  ('free-dofollow-startup-directories','Free dofollow startup directories',lambda r:r['pricing']=='Free' and r['link_type']=='Dofollow','A factual intersection of the Free and Dofollow reported labels. Neither the link nor an increase in Domain Rating is guaranteed.'),
  ('free-dofollow-dr-50-plus','Free dofollow directories with DR 50+',lambda r:r['pricing']=='Free' and r['link_type']=='Dofollow' and r['domain_rating']>=50,'A discovery shortlist, sorted by reported DR. Start with product eligibility and audience relevance, not the score alone.'),
- ('dr-30-plus','Directories with DR 30+',lambda r:r['domain_rating']>=30,'All archive entries whose reported DR is at least 30.'),
- ('dr-50-plus','Directories with DR 50+',lambda r:r['domain_rating']>=50,'All archive entries whose reported DR is at least 50.'),
- ('dr-70-plus','Directories with DR 70+',lambda r:r['domain_rating']>=70,'All archive entries whose reported DR is at least 70.'),
- ('dr-90-plus','Directories with DR 90+',lambda r:r['domain_rating']>=90,'All archive entries whose reported DR is at least 90. Many are communities, media sites or platform ecosystems rather than submission directories.'),
+ ('dr-30-plus','Directories with DR 30+',lambda r:r['domain_rating']>=30,'All catalog entries whose reported DR is at least 30.'),
+ ('dr-50-plus','Directories with DR 50+',lambda r:r['domain_rating']>=50,'All catalog entries whose reported DR is at least 50.'),
+ ('dr-70-plus','Directories with DR 70+',lambda r:r['domain_rating']>=70,'All catalog entries whose reported DR is at least 70.'),
+ ('dr-90-plus','Directories with DR 90+',lambda r:r['domain_rating']>=90,'All catalog entries whose reported DR is at least 90. Many are communities, media sites or platform ecosystems rather than submission directories.'),
  ('curated-subset','Indexed subset',lambda r:r['curated_subset'],'The 864 exact URLs also present in the 33 indexed views. This is a subset of—not a replacement for—the 1,018-row archive.'),
- ('archive-only','Archive-only entries',lambda r:not r['curated_subset'],'The 154 exact URLs outside the indexed-view union. They remain here so communities, media outlets, separate paths and other excluded entries are not silently lost.'),
+ ('archive-only','Archive-only entries',lambda r:not r['curated_subset'] and r['snapshot_date']==SNAPSHOT,'The 154 original archive URLs outside the indexed-view union. Later additions are recorded separately.'),
 ]
 view_counts={}
 for key,title,predicate,note in views:
     selected=drsort([r for r in rows if predicate(r)])
     view_counts[key]=len(selected)
-    write(f'views/{key}.md',f'# {title}\n\n[← README](../README.md) · [All views](README.md) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Snapshot: {SNAPSHOT} · Highest reported DR first\n\n{note}\n\n'+table(selected,category=True)+footer)
-write('views/README.md','# Browse by pricing, link type and Domain Rating\n\n[← Main catalog](../README.md)\n\nThese views filter the complete 1,018-entry archive; they are not restricted to the smaller indexed subset.\n\n| View | Entries |\n| --- | ---: |\n'+'\n'.join(f'| [{title}]({key}.md) | {view_counts[key]:,} |' for key,title,_,_ in views)+'\n')
+    write(f'views/{key}.md',f'# {title}\n\n[← README](../README.md) · [All views](README.md) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Latest record date: {max(r["snapshot_date"] for r in selected)} · Highest reported DR first\n\n{note}\n\n'+table(selected,category=True)+footer)
+write('views/README.md',f'# Browse by pricing, link type and Domain Rating\n\n[← Main catalog](../README.md)\n\nPricing and DR views filter all {len(rows):,} catalog entries, including dated additions. The indexed-subset and archive-only views retain their historical scope.\n\n| View | Entries |\n| --- | ---: |\n'+'\n'.join(f'| [{title}]({key}.md) | {view_counts[key]:,} |' for key,title,_,_ in views)+'\n')
 
 manifest={
  'schema_version':1,'snapshot_date':SNAPSHOT,
- 'captured':{'entries':len(rows),'unique_exact_urls':len({r['url'] for r in rows}),'pages':21,'categories':len(categories),'indexed_views':33,'indexed_subset_entries':864,'view_observations':6265,'additional_archive_entries':154},
+ 'captured':{'entries':len(archive),'unique_exact_urls':len({r['url'] for r in archive}),'pages':21,'categories':len(categories),'indexed_views':33,'indexed_subset_entries':864,'view_observations':6265,'additional_archive_entries':154},
+ 'current':{'entries':len(rows),'added_entries':len(additions),'last_updated':updated},
  'counts':{'pricing':dict(sorted(price_counts.items())),'link_type':dict(sorted(link_counts.items())),'category':dict(sorted(category_counts.items())),'views':view_counts},
  'coverage_complete':True,
  'coverage_checks':{'all_1018_exact_urls_preserved':True,'all_18_categories_present':True,'all_33_indexed_views_accounted_for':True,'indexed_subset_is_archive_subset':True,'duplicates_removed_by_domain':False},
@@ -119,9 +125,11 @@ readme=f'''![SaaS and startup listing sites: 1,018 destinations, 834 free listin
 
 # Awesome SaaS & Startup Directories: Free Backlinks & Domain Rating
 
-Find startup directories, SaaS listing sites and free backlink opportunities for your link building research. Compare **1,018 destinations** by pricing, reported Ahrefs Domain Rating (DR), and dofollow or nofollow link type, with the **highest DR first** in every listing table.
+Find startup directories, SaaS listing sites and free backlink opportunities for your link building research. Compare **{len(rows):,} destinations** by pricing, reported Ahrefs Domain Rating (DR), and dofollow or nofollow link type, with the **highest DR first** in every listing table.
 
-**1,018 exact links · 18 categories · 834 free listings · Snapshot: {SNAPSHOT}**
+**{len(rows):,} exact links · 18 categories · {price_counts['Free']} free listings · Updated: {updated}**
+
+Original archive: 1,018 entries captured {SNAPSHOT}. [Latest addition: AZN8 — free listing, no badge required](docs/ADDITIONS.md#azn8). The cover image shows the original archive totals.
 
 Looking to **increase Domain Rating**, find **free dofollow backlinks**, or submit your SaaS to **high-DR directories**? Start with the filtered shortlists below and the [guide to increasing DR](docs/INCREASE-DOMAIN-RATING.md). This archive includes launch platforms, communities and software review sites as well as directories. [Contributions and corrections are welcome](CONTRIBUTING.md).
 
@@ -212,6 +220,7 @@ Looking for free startup directories or researching free backlinks and Domain Ra
 ## Coverage and integrity
 
 - **Full archive:** 21 rendered pages, **1,018 rows / 1,018 distinct exact URLs**, with 18 rows on the final page.
+- **Current catalog:** {len(rows):,} entries, including {len(additions)} [dated addition](docs/ADDITIONS.md). New entries keep their own record dates and are not counted as original archive observations.
 - **Live list index:** **33 of 33 links**, **6,265 row observations**, **864 unique URLs**. Every per-list count matches the index.
 - **Nothing lost to domain deduplication:** separate group, community, integration and submission paths remain distinct. The [154 archive-only entries](views/archive-only.md) are preserved alongside the [864-entry indexed subset](views/curated-subset.md).
 - **No copied editorial material:** factual records only; no editorial reviews, descriptions or page replicas.
@@ -232,7 +241,7 @@ Looking for free startup directories or researching free backlinks and Domain Ra
 
 ## Snapshot notes
 
-Captured {SNAPSHOT}. Reported pricing, DR and link types have not been independently verified at every destination. There is no guarantee of acceptance, indexing, backlinks or ranking improvements. The catalog includes broad archive entries for completeness, not as endorsements. [Metadata limitations](docs/METHODOLOGY.md).
+Original archive captured {SNAPSHOT}; latest addition {updated}. Reported pricing, DR and link types have not been independently verified at every destination. There is no guarantee of acceptance, indexing, backlinks or ranking improvements. The catalog includes broad archive entries for completeness, not as endorsements. [Metadata limitations](docs/METHODOLOGY.md) · [Addition sources](docs/ADDITIONS.md).
 '''
 write('README.md',readme)
 coverage=f'''# Coverage report
@@ -240,6 +249,8 @@ coverage=f'''# Coverage report
 [← README](../README.md) · [Machine-readable counts](../data/coverage.json)
 
 Snapshot: **{SNAPSHOT}**. The capture reconciles **1,018 entries**, **18 categories**, and **33 indexed views**.
+
+Current catalog: **{len(rows):,} entries**, including **{len(additions)} dated addition** through {updated}. See [addition sources](ADDITIONS.md). Original archive counts below remain historical.
 
 | Measure | Captured |
 | --- | ---: |
@@ -261,7 +272,7 @@ Every captured archive row is represented once by its exact outgoing URL in the 
 
 ## Offline integrity
 
-The validator checks all 1,018 identities, CSV/JSON parity, category and filter membership, metadata tags, relative links and anchors, and the canonical catalog hash. It does not contact every destination or claim those destinations are active. See [methodology](METHODOLOGY.md) and [maintenance](MAINTENANCE.md).
+The validator checks all {len(rows):,} current identities, preservation of the 1,018 original records, CSV/JSON parity, category and filter membership, metadata tags, relative links and anchors, and the canonical catalog hash. It does not contact every destination or claim those destinations are active. See [methodology](METHODOLOGY.md) and [maintenance](MAINTENANCE.md).
 '''
 write('docs/COVERAGE.md',coverage)
 print(f'Built {len(rows)} entries, {len(categories)} categories, {len(views)} filtered views and full README.')

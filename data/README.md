@@ -4,10 +4,10 @@
 
 | File | Purpose |
 | --- | --- |
-| `catalog.json` | Canonical factual input for the 1,018-entry snapshot. |
+| `catalog.json` | Canonical input: 1,018 original archive records plus dated additions (currently 1,019 entries). |
 | `directories.json` | Generated JSON export of the same entries and fields. |
 | `directories.csv` | Generated spreadsheet-friendly export of the same entries and fields. |
-| `coverage.json` | Aggregate snapshot, category, pricing, link-type, subset and view counts. |
+| `coverage.json` | Historical capture counts, current totals, category, pricing, link-type, subset and view counts. |
 
 ## Catalog fields
 
@@ -21,7 +21,7 @@
 | `domain_rating` | Integer 0–100; reported Ahrefs Domain Rating, not an independent live query. |
 | `link_type` | `Dofollow`, `Nofollow`, or `Conditional`; reported classification, not a fresh link audit. |
 | `curated_subset` | Membership in the 864-entry indexed subset; not a recommendation or verification flag. |
-| `snapshot_date` | UTC capture date, `2026-10-26`; not the date every destination was checked. |
+| `snapshot_date` | UTC record date: `2026-10-26` for the original archive; later additions retain their own date. Not the date every metric was independently verified. |
 
 CSV represents `curated_subset` as `True`/`False`; JSON uses booleans. All public exports use the same factual fields. The catalog keeps distinct exact URLs even when they share a hostname.
 

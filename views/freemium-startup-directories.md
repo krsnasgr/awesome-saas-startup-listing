@@ -2,7 +2,7 @@
 
 [← README](../README.md) · [All views](README.md) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-45 entries · Snapshot: 2026-10-26 · Highest reported DR first
+45 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
 Entries labeled Freemium. Check what the free tier includes and whether a listing or link requires payment.
 
@@ -54,4 +54,4 @@ Entries labeled Freemium. Check what the free tier includes and whether a listin
 | [ManyLinks](<https://manylinks.co>) | Productivity | Freemium | 0 | Nofollow |
 | [ShowMeYourSite](<https://showmeyoursite.com>) | Software Discovery | Freemium | 0 | Dofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

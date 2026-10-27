@@ -2,7 +2,7 @@
 
 [← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-19 entries · Snapshot: 2026-10-26 · Highest reported DR first
+20 entries · Latest record date: 2026-10-27 · Highest reported DR first
 
 Software-as-a-service catalogs and integration ecosystems.
 
@@ -23,9 +23,12 @@ Software-as-a-service catalogs and integration ecosystems.
 | [CurlShip](<https://curlship.com>) | Free | 49 | Dofollow |
 | [SaaS Roots](<https://saasroots.com>) | Free | 45 | Dofollow |
 | [1000 Tools](<https://1000.tools>) | Freemium | 38 | Dofollow |
+| [AZN8](<https://azn8.com/>) | Free | 19 | Dofollow |
 | [SaaS Radius](<https://saasradius.com>) | Free | 10 | Nofollow |
 | [Best SaaS Tools](<https://www.bestsaastools.com>) | Free | 0 | Dofollow |
 | [SaasHunt](<https://saashunt.io>) | Free | 0 | Dofollow |
 | [Saassy Board](<https://saassyboard.com>) | Paid | 0 | Nofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+[AZN8: free listing, no badge required](../docs/ADDITIONS.md#azn8).
+
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

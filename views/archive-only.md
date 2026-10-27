@@ -2,9 +2,9 @@
 
 [← README](../README.md) · [All views](README.md) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-154 entries · Snapshot: 2026-10-26 · Highest reported DR first
+154 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
-The 154 exact URLs outside the indexed-view union. They remain here so communities, media outlets, separate paths and other excluded entries are not silently lost.
+The 154 original archive URLs outside the indexed-view union. Later additions are recorded separately.
 
 | Listing | Category | Pricing | DR¹ | Link type¹ |
 | --- | --- | --- | --- | --- |
@@ -163,4 +163,4 @@ The 154 exact URLs outside the indexed-view union. They remain here so communiti
 | [We &lt;3 Wordpress](<https://welovewp.com/submit>) | Design Tools | Paid | 33 | Dofollow |
 | [Mad Genius](<https://madgenius.co>) | AI Tools | Free | 15 | Dofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

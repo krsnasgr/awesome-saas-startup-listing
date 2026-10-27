@@ -2,7 +2,7 @@
 
 [← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-121 entries · Snapshot: 2026-10-26 · Highest reported DR first
+121 entries · Latest record date: 2026-10-26 · Highest reported DR first
 
 Discovery catalogs and launch surfaces focused on artificial-intelligence products.
 
@@ -130,4 +130,4 @@ Discovery catalogs and launch surfaces focused on artificial-intelligence produc
 | [Tools AI Online](<https://toolsaionline.com>) | Free | 0 | Nofollow |
 | [ToolScoutAPI](<https://toolscoutapi.com>) | Free | 0 | Nofollow |
 
-¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
+¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.
