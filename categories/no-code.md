@@ -2,7 +2,7 @@
 
 [← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-2 entries · Snapshot: 2026-10-26
+2 entries · Snapshot: 2026-10-26 · Highest reported DR first
 
 No-code product and builder discovery.
 

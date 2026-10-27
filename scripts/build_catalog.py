@@ -29,7 +29,7 @@ def table(rows, category=False):
     fields = ['Listing', 'Category'] if category else ['Listing']
     fields += ['Pricing', 'DR¹', 'Link type¹']
     out = ['| ' + ' | '.join(fields) + ' |', '| ' + ' | '.join('---' for _ in fields) + ' |']
-    for r in rows:
+    for r in drsort(rows):
         cells = [link(r)] + ([r['category']] if category else [])
         cells += [r['pricing'], str(r['domain_rating']), r['link_type']]
         out.append('| ' + ' | '.join(cells) + ' |')
@@ -76,7 +76,7 @@ category_notes = {
 footer = '\n\n¹ DR, pricing and link type are reported snapshot labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.\n'
 for category in categories:
     selected = [r for r in rows if r['category']==category]
-    write(f'categories/{slug(category)}.md',f'# {category}\n\n[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Snapshot: {SNAPSHOT}\n\n{category_notes[category]}\n\n'+table(selected)+footer)
+    write(f'categories/{slug(category)}.md',f'# {category}\n\n[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Snapshot: {SNAPSHOT} · Highest reported DR first\n\n{category_notes[category]}\n\n'+table(selected)+footer)
 
 views = [
  ('free-startup-directories','Free startup directories',lambda r:r['pricing']=='Free','Every archive entry labeled Free. This does not mean unrestricted promotion, a guaranteed approval, or a guaranteed free backlink.'),
@@ -115,17 +115,18 @@ jwrite('data/coverage.json',manifest)
 cat_nav='\n'.join(f'| [{c}](categories/{slug(c)}.md) | {category_counts[c]} | [Browse below](#{slug(c)}) |' for c in categories)
 view_nav='\n'.join(f'| [{title}](views/{key}.md) | {view_counts[key]:,} |' for key,title,_,_ in views[:8])
 contents_categories='\n'.join(f'  - [{c}](#{slug(c)})' for c in categories)
-readme=f'''# Awesome SaaS Startup Listings
+readme=f'''# Awesome SaaS & Startup Directories: Free Backlinks & Domain Rating
 
-Startup directories, SaaS listing sites and launch destinations for finding relevant places to share your product.
+Find startup directories, SaaS listing sites and free backlink opportunities for your link building research. Compare **1,018 destinations** by pricing, reported Ahrefs Domain Rating (DR), and dofollow or nofollow link type, with the **highest DR first** in every listing table.
 
 **1,018 exact links · 18 categories · 834 free listings · Snapshot: {SNAPSHOT}**
 
-Browse by category, price, reported Ahrefs Domain Rating (DR), or link type. This is a complete factual archive—not a ranked endorsement of every destination. [Contributions and corrections are welcome](CONTRIBUTING.md).
+Looking to **increase Domain Rating**, find **free dofollow backlinks**, or submit your SaaS to **high-DR directories**? Start with the filtered shortlists below and the [guide to increasing DR](docs/INCREASE-DOMAIN-RATING.md). This archive includes launch platforms, communities and software review sites as well as directories. [Contributions and corrections are welcome](CONTRIBUTING.md).
 
 ## Contents
 
 - [Start here](#start-here)
+- [How to increase Domain Rating with directory listings](#how-to-increase-domain-rating-with-directory-listings)
 - [Browse by category](#browse-by-category)
 - [Reading an entry](#reading-an-entry)
 - [Full catalog](#full-catalog)
@@ -144,6 +145,14 @@ Browse by category, price, reported Ahrefs Domain Rating (DR), or link type. Thi
 
 > Pricing, DR and link labels are reported snapshot values—not a current audit or a promise of free backlinks, a DR boost, rankings or acceptance. Communities, media outlets and non-SaaS destinations remain included for completeness. Check eligibility before submitting.
 
+## How to increase Domain Rating with directory listings
+
+Use this catalog to research relevant places to list your startup and earn backlinks. For a focused shortlist, browse [free dofollow directories with DR 50+](views/free-dofollow-dr-50-plus.md), [high-DR sites at 70+](views/dr-70-plus.md), or [all free listing sites](views/free-startup-directories.md).
+
+Ahrefs calculates DR from a domain's backlink profile; the referring site's DR and how many domains it links to both matter. A high-DR directory alone cannot predict your increase. [Ahrefs explains the calculation](https://help.ahrefs.com/en/articles/1409408-what-is-domain-rating-dr).
+
+Check product fit, current submission terms and the actual published link before recording a result. Read the [free backlinks and directory submission guide](docs/INCREASE-DOMAIN-RATING.md) for a workflow and answers about dofollow links, free submissions and DR growth.
+
 ## Browse by category
 
 Each archive entry appears once in the full catalog. Open a focused category page below, or jump to its section in this README.
@@ -154,7 +163,7 @@ Each archive entry appears once in the full catalog. Open a focused category pag
 
 ## Reading an entry
 
-Every listing appears in a table with **Listing, Pricing, DR and Link type** columns. The listing name links to the exact destination URL. Categories sort A–Z; filter tables sort by descending DR.
+Every listing appears in a table with **Listing, Pricing, DR and Link type** columns. The listing name links to the exact destination URL. All listing tables sort by descending DR, then name A–Z for ties. Category sections remain A–Z.
 
 - **Pricing:** `Free`, `Freemium` or `Paid`, as recorded in the snapshot. A free account does not necessarily mean every listing feature is free.
 - **DR:** the reported Ahrefs score at capture, not a live lookup or a prediction for your own website.

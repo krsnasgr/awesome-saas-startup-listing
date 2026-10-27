@@ -55,7 +55,10 @@ check('https://github.com/krsnasgr/awesome-saas-startup-listing)' in readme.read
 category_files=list((ROOT/'categories').glob('*.md'));check(len(category_files)==18,'Category pages missing')
 for category in {r['category'] for r in rows}:
     path=ROOT/'categories'/f'{slug(category)}.md'
-    check(table_urls(path)==[r['url'] for r in rows if r['category']==category],f'Wrong category: {category}')
+    selected=sorted([r for r in rows if r['category']==category],key=lambda r:(-r['domain_rating'],r['name'].casefold(),r['url']))
+    check(table_urls(path)==[r['url'] for r in selected],f'Wrong category or DR order: {category}')
+expected_readme_urls=[r['url'] for category in sorted({r['category'] for r in rows}) for r in sorted([r for r in rows if r['category']==category],key=lambda r:(-r['domain_rating'],r['name'].casefold(),r['url']))]
+check(table_urls(readme)==expected_readme_urls,'README category tables must use descending DR, then name')
 for path in [readme]+category_files:
     matches=re.findall(r'^\| \[.*?\]\(<([^>]+)>\) \| ([^|]+) \| (\d+) \| ([^|]+) \|$',path.read_text(),re.M)
     check(len(matches)==len(table_urls(path)),'Malformed metadata row')

@@ -47,7 +47,7 @@ The README and category pages are generated, with one entry per table row:
 - Keep names factual and retain captured spelling in preserved records.
 - Keep exact URLs; do not replace a path with a homepage or append tracking codes.
 - Use the existing category when it fits. Explain proposed category changes before reorganizing many records.
-- Keep entries alphabetized within categories. Filter tables use descending DR, then name.
+- Keep all listing tables sorted by descending DR, then name A–Z and exact URL for ties. The canonical JSON and CSV exports remain alphabetized by name.
 - Use concise, original factual wording for any new explanatory notes—not copied reviews, slogans or unsupported quality claims.
 
 ## Review checklist
