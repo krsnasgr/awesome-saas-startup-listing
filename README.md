@@ -1,3 +1,5 @@
+![SaaS and startup listing sites: 1,018 destinations, 834 free listings, 18 categories](.github/social-preview.png)
+
 # Awesome SaaS & Startup Directories: Free Backlinks & Domain Rating
 
 Find startup directories, SaaS listing sites and free backlink opportunities for your link building research. Compare **1,018 destinations** by pricing, reported Ahrefs Domain Rating (DR), and dofollow or nofollow link type, with the **highest DR first** in every listing table.

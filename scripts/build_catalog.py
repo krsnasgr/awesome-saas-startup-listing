@@ -115,7 +115,9 @@ jwrite('data/coverage.json',manifest)
 cat_nav='\n'.join(f'| [{c}](categories/{slug(c)}.md) | {category_counts[c]} | [Browse below](#{slug(c)}) |' for c in categories)
 view_nav='\n'.join(f'| [{title}](views/{key}.md) | {view_counts[key]:,} |' for key,title,_,_ in views[:8])
 contents_categories='\n'.join(f'  - [{c}](#{slug(c)})' for c in categories)
-readme=f'''# Awesome SaaS & Startup Directories: Free Backlinks & Domain Rating
+readme=f'''![SaaS and startup listing sites: 1,018 destinations, 834 free listings, 18 categories](.github/social-preview.png)
+
+# Awesome SaaS & Startup Directories: Free Backlinks & Domain Rating
 
 Find startup directories, SaaS listing sites and free backlink opportunities for your link building research. Compare **1,018 destinations** by pricing, reported Ahrefs Domain Rating (DR), and dofollow or nofollow link type, with the **highest DR first** in every listing table.
 
