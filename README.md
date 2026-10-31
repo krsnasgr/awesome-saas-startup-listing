@@ -1,5 +1,5 @@
 <a href="https://buzzlaunches.com/" rel="sponsored">
-  <img src=".github/sponsored-by-buzzlaunches.png" alt="Sponsored by BuzzLaunches" width="320" height="88" />
+  <img src=".github/sponsored-by-buzzlaunches.png" alt="Sponsored by BuzzLaunches" width="1280" />
 </a>
 
 ![SaaS and startup listing sites: 1,018 destinations, 834 free listings, 18 categories](.github/social-preview.png)
