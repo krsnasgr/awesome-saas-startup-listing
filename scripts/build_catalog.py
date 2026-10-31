@@ -122,7 +122,7 @@ cat_nav='\n'.join(f'| [{c}](categories/{slug(c)}.md) | {category_counts[c]} | [B
 view_nav='\n'.join(f'| [{title}](views/{key}.md) | {view_counts[key]:,} |' for key,title,_,_ in views[:8])
 contents_categories='\n'.join(f'  - [{c}](#{slug(c)})' for c in categories)
 readme=f'''<a href="https://buzzlaunches.com/" rel="sponsored">
-  <img src=".github/sponsored-by-buzzlaunches.png" alt="Sponsored by BuzzLaunches" width="1280" />
+  <img src=".github/buzzlaunches-sponsor-banner.png" alt="Sponsored by BuzzLaunches" width="1280" />
 </a>
 
 ![SaaS and startup listing sites: 1,018 destinations, 834 free listings, 18 categories](.github/social-preview.png)

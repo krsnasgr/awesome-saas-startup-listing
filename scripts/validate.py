@@ -58,7 +58,7 @@ readme=ROOT/'README.md'
 check(readme.stat().st_size<500*1024,'README exceeds GitHub 500 KiB limit')
 check(Counter(table_urls(readme))==Counter(by_url.keys()),'README must contain every exact URL once')
 check(readme.read_text().startswith('<a href="https://buzzlaunches.com/" rel="sponsored">'),'Sponsor must appear first with disclosure')
-check(all((ROOT/f'.github/sponsored-by-buzzlaunches.{ext}').exists() for ext in ['svg','png']),'Sponsor badge source or rendered asset missing')
+check(all((ROOT/f'.github/buzzlaunches-sponsor-banner.{ext}').exists() for ext in ['svg','png']),'Sponsor badge source or rendered asset missing')
 check(re.search(r'^## (.+)$',readme.read_text(),re.M).group(1)=='Contents','Contents must be first section')
 check('https://github.com/krsnasgr/awesome-saas-startup-listing)' in readme.read_text(),'Wrong repository canonical link')
 category_files=list((ROOT/'categories').glob('*.md'));check(len(category_files)==18,'Category pages missing')
