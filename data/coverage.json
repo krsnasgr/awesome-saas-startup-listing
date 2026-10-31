@@ -12,18 +12,18 @@
     "additional_archive_entries": 154
   },
   "current": {
-    "entries": 1019,
-    "added_entries": 1,
-    "last_updated": "2026-10-27"
+    "entries": 1020,
+    "added_entries": 2,
+    "last_updated": "2026-10-31"
   },
   "counts": {
     "pricing": {
-      "Free": 835,
+      "Free": 836,
       "Freemium": 45,
       "Paid": 139
     },
     "link_type": {
-      "Conditional": 2,
+      "Conditional": 3,
       "Dofollow": 596,
       "Nofollow": 421
     },
@@ -41,19 +41,19 @@
       "No-Code": 2,
       "Open Source": 5,
       "Productivity": 2,
-      "SaaS Tools": 20,
+      "SaaS Tools": 21,
       "Software Discovery": 114,
       "Software Reviews": 23,
       "Startup Directory": 9,
       "Tech / Startups": 155
     },
     "views": {
-      "free-startup-directories": 835,
+      "free-startup-directories": 836,
       "freemium-startup-directories": 45,
       "paid-startup-directories": 139,
       "dofollow-startup-directories": 596,
       "nofollow-startup-directories": 421,
-      "conditional-links": 2,
+      "conditional-links": 3,
       "free-dofollow-startup-directories": 459,
       "free-dofollow-dr-50-plus": 179,
       "dr-30-plus": 747,
@@ -72,7 +72,7 @@
     "indexed_subset_is_archive_subset": true,
     "duplicates_removed_by_domain": false
   },
-  "catalog_sha256": "b8b22c60dbfb365728f0cd65d4543e2b290a4cc49ccb403d06bf098c889e7ac1",
+  "catalog_sha256": "5156967a775653d88133683e8bba1cb42252b5a5edff2d8ff020a19843799c31",
   "limitations": [
     "Reported metadata was not independently verified at each destination.",
     "Pricing, Domain Rating and link type are snapshot labels, not guarantees or live metrics.",

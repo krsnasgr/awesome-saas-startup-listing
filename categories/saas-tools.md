@@ -2,7 +2,7 @@
 
 [← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-20 entries · Latest record date: 2026-10-27 · Highest reported DR first
+21 entries · Latest record date: 2026-10-31 · Highest reported DR first
 
 Software-as-a-service catalogs and integration ecosystems.
 
@@ -23,12 +23,13 @@ Software-as-a-service catalogs and integration ecosystems.
 | [CurlShip](<https://curlship.com>) | Free | 49 | Dofollow |
 | [SaaS Roots](<https://saasroots.com>) | Free | 45 | Dofollow |
 | [1000 Tools](<https://1000.tools>) | Freemium | 38 | Dofollow |
+| [BuzzLaunches](<https://buzzlaunches.com/>) | Free | 22 | Conditional |
 | [AZN8](<https://azn8.com/>) | Free | 19 | Dofollow |
 | [SaaS Radius](<https://saasradius.com>) | Free | 10 | Nofollow |
 | [Best SaaS Tools](<https://www.bestsaastools.com>) | Free | 0 | Dofollow |
 | [SaasHunt](<https://saashunt.io>) | Free | 0 | Dofollow |
 | [Saassy Board](<https://saassyboard.com>) | Paid | 0 | Nofollow |
 
-[AZN8: free listing, no badge required](../docs/ADDITIONS.md#azn8).
+[AZN8: no badge required](../docs/ADDITIONS.md#azn8) · [BuzzLaunches: verified badge required for free dofollow](../docs/ADDITIONS.md#buzzlaunches).
 
 ¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.

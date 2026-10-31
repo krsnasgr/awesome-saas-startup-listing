@@ -4,7 +4,7 @@ GitHub About metadata for this catalog. Keep this reference in sync when changin
 
 ## Description
 
-1,019 startup directories, SaaS listing sites & launch platforms for backlink research. Find free dofollow opportunities and high-DR sites, sorted by Ahrefs Domain Rating. Includes pricing, link types, 18 categories, CSV/JSON & a guide to increasing DR.
+1,020 startup directories, SaaS listing sites & launch platforms for backlink research. Find free dofollow opportunities and high-DR sites, sorted by Ahrefs Domain Rating. Includes pricing, link types, 18 categories, CSV/JSON & a guide to increasing DR.
 
 ## Website
 

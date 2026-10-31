@@ -43,7 +43,7 @@ Ahrefs says nofollow backlinks do not pass rating in its DR calculation. A nofol
 
 ### Where can I find free backlinks for a SaaS startup?
 
-Begin with the [free dofollow shortlist](../views/free-dofollow-startup-directories.md), then narrow it by category and current eligibility. This catalog records 835 entries labeled Free across all link types; it does not promise 835 free backlinks.
+Begin with the [free dofollow shortlist](../views/free-dofollow-startup-directories.md), then narrow it by category and current eligibility. This catalog records 836 entries labeled Free across all link types; it does not promise 836 free backlinks.
 
 ### Can I boost DR quickly or guarantee a target score?
 

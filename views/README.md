@@ -2,16 +2,16 @@
 
 [← Main catalog](../README.md)
 
-Pricing and DR views filter all 1,019 catalog entries, including dated additions. The indexed-subset and archive-only views retain their historical scope.
+Pricing and DR views filter all 1,020 catalog entries, including dated additions. The indexed-subset and archive-only views retain their historical scope.
 
 | View | Entries |
 | --- | ---: |
-| [Free startup directories](free-startup-directories.md) | 835 |
+| [Free startup directories](free-startup-directories.md) | 836 |
 | [Freemium startup directories](freemium-startup-directories.md) | 45 |
 | [Paid startup directories](paid-startup-directories.md) | 139 |
 | [Dofollow startup directories](dofollow-startup-directories.md) | 596 |
 | [Nofollow startup directories](nofollow-startup-directories.md) | 421 |
-| [Conditional link types](conditional-links.md) | 2 |
+| [Conditional link types](conditional-links.md) | 3 |
 | [Free dofollow startup directories](free-dofollow-startup-directories.md) | 459 |
 | [Free dofollow directories with DR 50+](free-dofollow-dr-50-plus.md) | 179 |
 | [Directories with DR 30+](dr-30-plus.md) | 747 |

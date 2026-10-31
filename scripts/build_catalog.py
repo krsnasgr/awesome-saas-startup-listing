@@ -40,7 +40,7 @@ def drsort(rows):
     return sorted(rows, key=lambda r:(-r['domain_rating'], r['name'].casefold(), r['url']))
 
 rows = az(read('catalog.json'))
-assert len(rows) == len({r['url'] for r in rows}) == 1019
+assert len(rows) == len({r['url'] for r in rows}) == 1020
 archive = [r for r in rows if r['snapshot_date'] == SNAPSHOT]
 additions = [r for r in rows if r['snapshot_date'] != SNAPSHOT]
 updated = max(r['snapshot_date'] for r in rows)
@@ -49,8 +49,8 @@ categories = sorted({r['category'] for r in rows})
 price_counts = Counter(r['pricing'] for r in rows)
 link_counts = Counter(r['link_type'] for r in rows)
 category_counts = Counter(r['category'] for r in rows)
-assert price_counts == {'Free':835,'Freemium':45,'Paid':139}
-assert link_counts == {'Dofollow':596,'Nofollow':421,'Conditional':2}
+assert price_counts == {'Free':836,'Freemium':45,'Paid':139}
+assert link_counts == {'Dofollow':596,'Nofollow':421,'Conditional':3}
 assert len(categories) == 18
 jwrite('data/directories.json', rows)
 with (DATA / 'directories.csv').open('w',newline='',encoding='utf-8') as f:
@@ -80,7 +80,7 @@ category_notes = {
 footer = '\n\n¹ DR, pricing and link type are dated reported labels, not independent current verification. See [methodology and caveats](../docs/METHODOLOGY.md) and [dated additions](../docs/ADDITIONS.md). Exact outgoing URLs are preserved; inclusion is not an endorsement.\n'
 for category in categories:
     selected = [r for r in rows if r['category']==category]
-    note = '\n\n[AZN8: free listing, no badge required](../docs/ADDITIONS.md#azn8).' if category == 'SaaS Tools' else ''
+    note = '\n\n[AZN8: no badge required](../docs/ADDITIONS.md#azn8) · [BuzzLaunches: verified badge required for free dofollow](../docs/ADDITIONS.md#buzzlaunches).' if category == 'SaaS Tools' else ''
     write(f'categories/{slug(category)}.md',f'# {category}\n\n[← All categories](../README.md#browse-by-category) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)\n\n{len(selected)} entries · Latest record date: {max(r["snapshot_date"] for r in selected)} · Highest reported DR first\n\n{category_notes[category]}\n\n'+table(selected)+note+footer)
 
 views = [
@@ -89,7 +89,7 @@ views = [
  ('paid-startup-directories','Paid startup directories',lambda r:r['pricing']=='Paid','Entries labeled Paid. Compare audience fit and submission terms rather than buying a promised ranking outcome.'),
  ('dofollow-startup-directories','Dofollow startup directories',lambda r:r['link_type']=='Dofollow','Reported Dofollow entries across every pricing tier. This is not a fresh audit of live backlink attributes.'),
  ('nofollow-startup-directories','Nofollow startup directories',lambda r:r['link_type']=='Nofollow','Reported Nofollow entries. Evaluate relevant audience exposure independently of link labels.'),
- ('conditional-links','Conditional link types',lambda r:r['link_type']=='Conditional','Conditional is deliberately preserved as its own type. Confirm the applicable placement, plan and linking terms.'),
+ ('conditional-links','Conditional link types',lambda r:r['link_type']=='Conditional','Conditional is deliberately preserved as its own type. Confirm the applicable placement, plan and linking terms. BuzzLaunches requires a verified badge for free dofollow; without it the link is nofollow. See [the recorded requirement](../docs/ADDITIONS.md#buzzlaunches).'),
  ('free-dofollow-startup-directories','Free dofollow startup directories',lambda r:r['pricing']=='Free' and r['link_type']=='Dofollow','A factual intersection of the Free and Dofollow reported labels. Neither the link nor an increase in Domain Rating is guaranteed.'),
  ('free-dofollow-dr-50-plus','Free dofollow directories with DR 50+',lambda r:r['pricing']=='Free' and r['link_type']=='Dofollow' and r['domain_rating']>=50,'A discovery shortlist, sorted by reported DR. Start with product eligibility and audience relevance, not the score alone.'),
  ('dr-30-plus','Directories with DR 30+',lambda r:r['domain_rating']>=30,'All catalog entries whose reported DR is at least 30.'),
@@ -121,7 +121,11 @@ jwrite('data/coverage.json',manifest)
 cat_nav='\n'.join(f'| [{c}](categories/{slug(c)}.md) | {category_counts[c]} | [Browse below](#{slug(c)}) |' for c in categories)
 view_nav='\n'.join(f'| [{title}](views/{key}.md) | {view_counts[key]:,} |' for key,title,_,_ in views[:8])
 contents_categories='\n'.join(f'  - [{c}](#{slug(c)})' for c in categories)
-readme=f'''![SaaS and startup listing sites: 1,018 destinations, 834 free listings, 18 categories](.github/social-preview.png)
+readme=f'''<a href="https://buzzlaunches.com/" rel="sponsored">
+  <img src=".github/sponsored-by-buzzlaunches.png" alt="Sponsored by BuzzLaunches" width="320" height="88" />
+</a>
+
+![SaaS and startup listing sites: 1,018 destinations, 834 free listings, 18 categories](.github/social-preview.png)
 
 # Awesome SaaS & Startup Directories: Free Backlinks & Domain Rating
 
@@ -129,7 +133,7 @@ Find startup directories, SaaS listing sites and free backlink opportunities for
 
 **{len(rows):,} exact links · 18 categories · {price_counts['Free']} free listings · Updated: {updated}**
 
-Original archive: 1,018 entries captured {SNAPSHOT}. [Latest addition: AZN8 — free listing, no badge required](docs/ADDITIONS.md#azn8). The cover image shows the original archive totals.
+Original archive: 1,018 entries captured {SNAPSHOT}. [Latest addition: BuzzLaunches — verified badge required for free dofollow](docs/ADDITIONS.md#buzzlaunches). The cover image shows the original archive totals.
 
 Looking to **increase Domain Rating**, find **free dofollow backlinks**, or submit your SaaS to **high-DR directories**? Start with the filtered shortlists below and the [guide to increasing DR](docs/INCREASE-DOMAIN-RATING.md). This archive includes launch platforms, communities and software review sites as well as directories. [Contributions and corrections are welcome](CONTRIBUTING.md).
 
@@ -207,7 +211,7 @@ related={
 }
 for c in categories:
     peers=' · '.join(f'[{v}](#{slug(v)})' for v in related[c])
-    readme+=f'<a id="{slug(c)}"></a>\n\n### {c}\n\n{category_counts[c]} entries · [Focused page](categories/{slug(c)}.md) · [Back to contents](#contents)\n\n{category_notes[c]}\n\nExplore also: {peers}.\n\n'+table([r for r in rows if r['category']==c])+'\n\n'
+    readme+=f'<a id="{slug(c)}"></a>\n\n### {c}\n\n{category_counts[c]} entries · [Focused page](categories/{slug(c)}.md) · [Back to contents](#contents)\n\n{category_notes[c]}\n\nExplore also: {peers}.\n\n'+table([r for r in rows if r['category']==c])+('\n\n**BuzzLaunches:** free dofollow requires a verified badge; without it, the link is nofollow. [Details](docs/ADDITIONS.md#buzzlaunches).\n' if c == 'SaaS Tools' else '')+'\n\n'
 readme+=f'''## Use the list well
 
 1. **Check fit first.** Pick a relevant audience and verify that the destination accepts your product type.
@@ -220,7 +224,7 @@ Looking for free startup directories or researching free backlinks and Domain Ra
 ## Coverage and integrity
 
 - **Full archive:** 21 rendered pages, **1,018 rows / 1,018 distinct exact URLs**, with 18 rows on the final page.
-- **Current catalog:** {len(rows):,} entries, including {len(additions)} [dated addition](docs/ADDITIONS.md). New entries keep their own record dates and are not counted as original archive observations.
+- **Current catalog:** {len(rows):,} entries, including {len(additions)} [dated additions](docs/ADDITIONS.md). New entries keep their own record dates and are not counted as original archive observations.
 - **Live list index:** **33 of 33 links**, **6,265 row observations**, **864 unique URLs**. Every per-list count matches the index.
 - **Nothing lost to domain deduplication:** separate group, community, integration and submission paths remain distinct. The [154 archive-only entries](views/archive-only.md) are preserved alongside the [864-entry indexed subset](views/curated-subset.md).
 - **No copied editorial material:** factual records only; no editorial reviews, descriptions or page replicas.
@@ -250,7 +254,7 @@ coverage=f'''# Coverage report
 
 Snapshot: **{SNAPSHOT}**. The capture reconciles **1,018 entries**, **18 categories**, and **33 indexed views**.
 
-Current catalog: **{len(rows):,} entries**, including **{len(additions)} dated addition** through {updated}. See [addition sources](ADDITIONS.md). Original archive counts below remain historical.
+Current catalog: **{len(rows):,} entries**, including **{len(additions)} dated additions** through {updated}. See [addition sources](ADDITIONS.md). Original archive counts below remain historical.
 
 | Measure | Captured |
 | --- | ---: |

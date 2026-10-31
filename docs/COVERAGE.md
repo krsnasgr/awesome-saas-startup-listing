@@ -4,7 +4,7 @@
 
 Snapshot: **2026-10-26**. The capture reconciles **1,018 entries**, **18 categories**, and **33 indexed views**.
 
-Current catalog: **1,019 entries**, including **1 dated addition** through 2026-10-27. See [addition sources](ADDITIONS.md). Original archive counts below remain historical.
+Current catalog: **1,020 entries**, including **2 dated additions** through 2026-10-31. See [addition sources](ADDITIONS.md). Original archive counts below remain historical.
 
 | Measure | Captured |
 | --- | ---: |
@@ -26,4 +26,4 @@ Every captured archive row is represented once by its exact outgoing URL in the 
 
 ## Offline integrity
 
-The validator checks all 1,019 current identities, preservation of the 1,018 original records, CSV/JSON parity, category and filter membership, metadata tags, relative links and anchors, and the canonical catalog hash. It does not contact every destination or claim those destinations are active. See [methodology](METHODOLOGY.md) and [maintenance](MAINTENANCE.md).
+The validator checks all 1,020 current identities, preservation of the 1,018 original records, CSV/JSON parity, category and filter membership, metadata tags, relative links and anchors, and the canonical catalog hash. It does not contact every destination or claim those destinations are active. See [methodology](METHODOLOGY.md) and [maintenance](MAINTENANCE.md).

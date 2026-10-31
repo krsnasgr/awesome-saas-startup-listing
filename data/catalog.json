@@ -2101,6 +2101,17 @@
     "snapshot_date": "2026-10-26"
   },
   {
+    "id": "1a323473538a242b",
+    "name": "BuzzLaunches",
+    "url": "https://buzzlaunches.com/",
+    "category": "SaaS Tools",
+    "pricing": "Free",
+    "domain_rating": 22,
+    "link_type": "Conditional",
+    "curated_subset": false,
+    "snapshot_date": "2026-10-31"
+  },
+  {
     "id": "918d985ac0bee2f7",
     "name": "Callupcontact",
     "url": "https://callupcontact.com",

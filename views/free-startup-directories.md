@@ -2,7 +2,7 @@
 
 [← README](../README.md) · [All views](README.md) · [CSV](../data/directories.csv) · [JSON](../data/directories.json)
 
-835 entries · Latest record date: 2026-10-27 · Highest reported DR first
+836 entries · Latest record date: 2026-10-31 · Highest reported DR first
 
 Every catalog entry labeled Free. This does not mean unrestricted promotion, a guaranteed approval, or a guaranteed free backlink.
 
@@ -668,6 +668,7 @@ Every catalog entry labeled Free. This does not mean unrestricted promotion, a g
 | [IndieMaker](<https://indiemaker.co>) | Community | Free | 23 | Nofollow |
 | [Online AI Tools Directory](<https://www.tools-ai.online>) | General Directory | Free | 23 | Dofollow |
 | [Selected Site](<https://selected.site>) | General Directory | Free | 23 | Nofollow |
+| [BuzzLaunches](<https://buzzlaunches.com/>) | SaaS Tools | Free | 22 | Conditional |
 | [AI ToolBoard](<https://aitoolboard.com/submit-ai-tool>) | General Directory | Free | 21 | Dofollow |
 | [AI-Hunter.io](<https://ai-hunter.io>) | AI Tools | Free | 21 | Dofollow |
 | [All HR Software](<https://allhrsoftware.com>) | Software Discovery | Free | 21 | Nofollow |
